@@ -177,7 +177,7 @@ function! s:GistList(user, token, gistls, page)
     endif
     setlocal modifiable
   else
-    exec 'silent split gist:'.a:gistls
+    exec 'silent edit gist:'.a:gistls
   endif
 
   setlocal foldmethod=manual
@@ -296,7 +296,7 @@ function! s:GistGet(user, token, gistid, clipboard)
     endif
     setlocal modifiable
   else
-    exec 'silent split gist:'.a:gistid
+    exec 'silent edit gist:'.a:gistid
   endif
   filetype detect
   silent %d _
